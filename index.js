@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/", require("./routes/root"));
+app.use("/package", require("./routes/package"));
 
 app.use(errLogger);
 
