@@ -34,6 +34,10 @@ const packageSchema = new Schema({
     type: Number,
     required: true,
   },
+  status: {
+    type: [String],
+    default: ["pending"], // Default status is "pending"
+  },
   details: [detailSchema],
 });
 
