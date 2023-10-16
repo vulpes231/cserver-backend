@@ -57,7 +57,8 @@ const getPackageByTracking = async (req, res) => {
   const { tracking } = req.params;
 
   console.log(tracking);
-  if (!tracking) return res.status(400).json({ message: "Bad request!" });
+  if (!tracking || tracking === undefined)
+    return res.status(400).json({ message: "Bad request!" });
 
   try {
     const pkg = await Package.findOne({ tracking: tracking }).lean().exec();
