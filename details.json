@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "652d7d53ea6eb986e67913f9",
+    "item": "Box of gold",
+    "sender": "Bulat",
+    "tracking": 857163078873168,
+    "status": ["pending"],
+    "details": [
+      {
+        "timestamp": "10:30am",
+        "datestamp": "Oct 16, 2023",
+        "description": "Arrived at 247Shipping Regional Distribution Facility",
+        "location": "MAADI, CAIRO GOVERNATE 11728",
+        "_id": "652d7de0ea6eb986e67913fd"
+      },
+      {
+        "timestamp": "4:15pm",
+        "datestamp": "Oct 31st, 2023",
+        "description": "Departed 247Shipping Distribution Facility to Suez Port (El Suweis)",
+        "location": "In Transit",
+        "_id": "65422da721018d5cecd81504"
+      }
+    ],
+    "__v": 2
+  }
+]

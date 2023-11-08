@@ -58,6 +58,25 @@ const addPackageDetails = async (req, res) => {
   }
 };
 
+const deletePackageDetails = async (req, res) => {
+  const { id } = req.body;
+
+  if (!id) return res.status(400).json({ message: "Bad request!" });
+  try {
+    const foundPackageDetails = await Package.details
+      .findOne({ _id: id })
+      .exec();
+    if (!foundPackageDetails)
+      res.status(404).json({ message: "Package not found!" });
+
+    await foundPackage.deleteOne();
+    res.status(204).json({ message: "Package deleted successfully!" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "An error occurred. Try again later." });
+  }
+};
+
 const getPackageByTracking = async (req, res) => {
   const { tracking } = req.params;
 
@@ -109,4 +128,5 @@ module.exports = {
   addPackageDetails,
   getAllPackage,
   deletePackage,
+  deletePackageDetails,
 }; //
